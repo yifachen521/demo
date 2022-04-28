@@ -1,7 +1,7 @@
 package com.example.demo.handler;
 
 
-import com.example.demo.pojo.ReportUser;
+import com.example.demo.pojo.entity.ReportUser;
 
 /**
  * @Author QianWei.Song

@@ -1,8 +1,8 @@
-package com.example.demo.service;
+package com.example.demo.service.impl;
 
 
 import com.example.demo.mapper.SysUserRoleMapper;
-import com.example.demo.pojo.SysUserRole;
+import com.example.demo.pojo.entity.SysUserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

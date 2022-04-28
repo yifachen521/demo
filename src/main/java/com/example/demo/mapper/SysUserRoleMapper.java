@@ -1,7 +1,7 @@
 package com.example.demo.mapper;
 
 
-import com.example.demo.pojo.SysUserRole;
+import com.example.demo.pojo.entity.SysUserRole;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 

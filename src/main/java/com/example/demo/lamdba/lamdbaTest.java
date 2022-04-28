@@ -1,7 +1,7 @@
 package com.example.demo.lamdba;
 
 
-import com.example.demo.pojo.Person;
+import com.example.demo.pojo.entity.Person;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

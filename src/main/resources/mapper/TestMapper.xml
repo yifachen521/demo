@@ -2,11 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.TestMapper">
 
-    <resultMap id="mappingList" type="com.example.demo.pojo.BusReport">
+    <resultMap id="mappingList" type="com.example.demo.pojo.entity.BusReport">
         <result property="reportInfo" column="report_info" typeHandler="com.example.demo.handler.ReporUserArrayHandler"></result>
     </resultMap>
 
-    <resultMap id="mappingObj" type="com.example.demo.pojo.BusReport">
+    <resultMap id="mappingObj" type="com.example.demo.pojo.entity.BusReport">
         <result property="reportInfo" column="report_info" typeHandler="com.example.demo.handler.ReporUserObjHandler"></result>
     </resultMap>
 
@@ -18,13 +18,13 @@
         select * from sys_user where id=1
     </select>
 
-    <insert id="insertUserInfo" useGeneratedKeys="true" parameterType="com.example.demo.pojo.SysUser">
+    <insert id="insertUserInfo" useGeneratedKeys="true" parameterType="com.example.demo.pojo.entity.SysUser">
         insert into sys_user (name,password,sex) values (#{user.name},#{user.password},#{user.sex})
     </insert>
 
 
 
-    <select id="getUser" resultType="com.example.demo.pojo.SysUser" >
+    <select id="getUser" resultType="com.example.demo.pojo.entity.SysUser" >
         select * from sys_user where id= #{id}
     </select>
 </mapper>

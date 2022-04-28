@@ -1,4 +1,4 @@
-package com.example.demo.pojo;
+package com.example.demo.pojo.entity;
 
 
 import org.springframework.stereotype.Component;

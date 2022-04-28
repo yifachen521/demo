@@ -33,7 +33,7 @@ public class CodeGenerator {
     /**
      * 需要生成的表名(两者只能取其一)
      */
-    private String[] includeTables = {"project_item_discuss", "project_item_log", "project_iteration", "project_iteration_item"};
+    private String[] includeTables = {"computer"};
 
     private String[] excludeTables = {};
     /**

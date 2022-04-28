@@ -1,7 +1,6 @@
 package com.example.demo.kafka;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 @Component
 public class kafka {
@@ -22,7 +21,7 @@ public class kafka {
         }
     }
 
-    @KafkaListener(topics = "test_topic")
+   // @KafkaListener(topics = "test_topic")
     public void cesh1(ConsumerRecord<?, ?> record){
         System.out.printf("topic = %s, offset = %d, value = %s \n", record.topic(), record.offset(), record.value());
     }

@@ -1,8 +1,8 @@
-package com.example.demo.service;
+package com.example.demo.service.impl;
 
 
 import com.example.demo.mapper.SysUserMapper;
-import com.example.demo.pojo.SysUser;
+import com.example.demo.pojo.entity.SysUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

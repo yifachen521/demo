@@ -1,8 +1,8 @@
 package com.example.demo.service;
 
 
-import com.example.demo.pojo.BusReport;
-import com.example.demo.pojo.SysUser;
+import com.example.demo.pojo.entity.BusReport;
+import com.example.demo.pojo.entity.SysUser;
 
 /**
  * @Author QianWei.Song

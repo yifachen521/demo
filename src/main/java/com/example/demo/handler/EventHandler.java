@@ -1,7 +1,7 @@
 package com.example.demo.handler;
 
 
-import com.example.demo.pojo.TestHandlerEvent;
+import com.example.demo.pojo.entity.TestHandlerEvent;
 import org.springframework.boot.context.event.ApplicationStartedEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.scheduling.annotation.Async;

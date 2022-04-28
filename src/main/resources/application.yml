@@ -21,17 +21,17 @@ spring:
     maintainTimeStats: false
 
 
-  kafka:
-    bootstrap-servers: 150.158.42.150:9093
-    producer:
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer
-    consumer:
-        group-id: test
-        enable-auto-commit: true
-        auto-commit-interval: 1000
-        key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-        value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#  kafka:
+#    bootstrap-servers: 150.158.42.150:9093
+#    producer:
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+#    consumer:
+#        group-id: test
+#        enable-auto-commit: true
+#        auto-commit-interval: 1000
+#        key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#        value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 
 ## mybatis\u914D\u7F6E
 ## \u914D\u7F6E\u522B\u540D\u9700\u8981\u626B\u63CF\u7684\u5305

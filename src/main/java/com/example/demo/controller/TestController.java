@@ -2,8 +2,8 @@ package com.example.demo.controller;
 
 
 import com.example.demo.annotation.ReqLog;
-import com.example.demo.pojo.SysUser;
-import com.example.demo.service.SysUserService;
+import com.example.demo.pojo.entity.SysUser;
+import com.example.demo.service.impl.SysUserService;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

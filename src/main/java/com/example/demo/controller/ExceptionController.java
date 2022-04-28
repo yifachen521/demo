@@ -3,7 +3,7 @@ package com.example.demo.controller;
 
 import com.example.demo.exception.CustomizeException;
 import com.example.demo.mapper.SysRoleMapper;
-import com.example.demo.pojo.SysUser;
+import com.example.demo.pojo.entity.SysUser;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
