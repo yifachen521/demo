@@ -1,0 +1,75 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/caonima?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    #    password: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    cachePrepStmts: true
+    prepStmtCacheSize: 300
+    prepStmtCacheSqlLimit: 2048
+    useServerPrepStmts: true
+    useLocalSessionState: true
+    rewriteBatchedStatements: true
+    cacheResultSetMetadata: true
+    cacheServerConfiguration: true
+    elideSetAutoCommits: true
+    maintainTimeStats: false
+
+
+  kafka:
+    bootstrap-servers: 150.158.42.150:9093
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+        group-id: test
+        enable-auto-commit: true
+        auto-commit-interval: 1000
+        key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+## mybatis\u914D\u7F6E
+## \u914D\u7F6E\u522B\u540D\u9700\u8981\u626B\u63CF\u7684\u5305
+##mybatis.type-aliases-package=com.qf.pojo
+#mybatis:
+#  mapper-locations: classpath:mapper/*.xml
+#  configuration:
+#    #    \u6253\u5370sql
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    #    开启驼峰映射（）对应数据库名的话就可以实现自动映射
+#    map-underscore-to-camel-case: true
+#    #使用枚举项的下标作为  保存在数据库中的参数
+#   # default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
+#    default-enum-type-handler: org.apache.ibatis.type.EnumTypeHandler
+mybatis-plus:
+  # xml扫描，多个目录用逗号或者分号分隔（告诉 Mapper 所对应的 XML 文件位置）
+  mapper-locations: classpath*:sql/*Mapper.xml
+  # 以下配置均有默认值,可以不设置
+  global-config:
+    db-config:
+      #主键类型 AUTO:"数据库ID自增" INPUT:"用户输入ID",ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: auto
+  configuration:
+    # 是否开启自动驼峰命名规则映射:从数据库列名到Java属性驼峰命名的类似映射
+    map-underscore-to-camel-case: true
+    # 如果查询结果中包含空值的列，则 MyBatis 在映射的时候，不会映射这个字段
+    call-setters-on-nulls: true
+    # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+test:
+  auto:
+    song: 爸爸
+    test: 33

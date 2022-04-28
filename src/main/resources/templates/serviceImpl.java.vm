@@ -1,0 +1,20 @@
+package $!{package.ServiceImpl};
+
+import $!{package.Entity}.$!{entity};
+import $!{package.Mapper}.$!{table.mapperName};
+import $!{package.Service}.$!{table.serviceName};
+#set($dto=$package.Entity.replace("entity","dto"))
+import $!{dto}.$!{entity}DTO;
+import org.springframework.stereotype.Service;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+/**
+ * $!{table.comment} 服务实现类
+ *
+ * @author $!{author}
+ * @since $!{date}
+ * @copyright Copyright© 杭州聚能视界科技有限公司
+ */
+@Service
+public class ${table.serviceImplName} extends ServiceImpl<${table.mapperName}, ${entity}> implements ${table.serviceName} {
+
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>福彩双色球随机选号</title>
+    <script>
+        function start() {
+            var arr1 = newRandomNumbersWithNoRepeat(1, 33, 6);
+            var arr2 = newRandomNumbersWithNoRepeat(1, 16, 1);
+
+            arr1.sort(compare);
+            arr2.sort(compare);
+
+            document.getElementById("b1").value = arr1[0];
+            document.getElementById("b2").value = arr1[1];
+            document.getElementById("b3").value = arr1[2];
+            document.getElementById("b4").value = arr1[3];
+            document.getElementById("b5").value = arr1[4];
+            document.getElementById("b6").value = arr1[5];
+
+            document.getElementById("b7").value = arr2[0];
+
+            document.getElementById("button").style.display = 'none';
+            document.getElementById("three").style.display = 'block';
+        }
+
+        function compare(val1,val2){
+            return val1-val2;
+        };
+        function newNumber(start,end){
+            return Math.round(Math.random()*(end-start)+start);//生成在[start,end]范围内的随机数值，只支持不小于0的合法范围
+        }
+        function isHaveThisNumber(para,num){
+            //拒绝无效的数组
+            if(typeof(para) == "object")
+            {
+                if(para.length==0)
+                {
+                    return false;
+                }
+            }
+            for(var i=0;i<para.length;i++){
+                if(para[i]==num){
+                    return true;//与目标数组有重复
+                }
+            }
+            return false;
+        }
+        function newRandomNumbersWithNoRepeat(start,end,size){
+            var para=new Array();//目标随机数组
+            var rnum;//当前随机数
+            var currentIndex=0;//当前随机数组的索引
+            if(start>end||start<0||end<0||size<0){
+                return;
+            }
+            if(end-start+1<size){//验证随机数个数是否超出随机数范围
+                return;
+            }
+            for(var i=0;i<size;i++){//生成 size 个不重复的随机数
+                rnum=newNumber(start,end);//获取随机数
+                if(isHaveThisNumber(para,rnum)){//是否已经存在
+                    while(isHaveThisNumber(para,rnum)){//获取新的随机数 直到不重复
+                        rnum=newNumber(start,end);//重新获取随机数
+                    }
+                }
+                para[currentIndex++]=rnum;//添加到现有数字集合中
+            }
+            return para;
+        }
+    </script>
+
+</head>
+<body>
+
+<div class="one">
+    <div id="button">
+        <button type="button" class="two" onclick="start()">随机选号</button>
+    </div>
+
+    <div class="three" id="three">
+        <input id="b1" type="button" class="b1" value="">
+        <input id="b2" type="button" class="b2" value="">
+        <input id="b3" type="button" class="b3" value="">
+        <input id="b4" type="button" class="b4" value="">
+        <input id="b5" type="button" class="b5" value="">
+        <input id="b6" type="button" class="b6" value="">
+        <input id="b7" type="button" class="b7" value="">
+    </div>
+</div>
+
+<style type="text/css">
+    .one{
+        margin-left: 400px;
+        margin-top: 332px;
+    }
+    .two{
+        font-size: 56px;
+        font-family: initial;
+        color: crimson;
+        margin-left: -38px;
+    }
+    .three{
+        display: none;
+        margin-left: -150px;
+        margin-top: 161px;
+    }
+    .b1{
+        margin-left: -115px;
+        font-size: 70px;
+        color: red;
+        margin-right: 14px;
+    }
+    .b2{
+        font-size: 70px;
+        color: red;
+        margin-right: 14px;
+    }
+    .b3{
+        font-size: 70px;
+        color: red;
+        margin-right: 14px;
+    }
+    .b4{
+        font-size: 70px;
+        color: red;
+        margin-right: 14px;
+    }
+    .b5{
+        font-size: 70px;
+        color: red;
+        margin-right: 14px;
+    }
+    .b6{
+        font-size: 70px;
+        color: red;
+        margin-right: 14px;
+    }
+    .b7{
+        font-size: 70px;
+        color: blue;
+        margin-right: 14px;
+    }
+</style>
+
+</body>
+</html>

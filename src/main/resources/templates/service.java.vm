@@ -1,0 +1,15 @@
+package $!{package.Service};
+
+import $!{package.Entity}.$!{entity};
+import com.baomidou.mybatisplus.extension.service.IService;
+
+/**
+ * $!{table.comment} 服务类
+ *
+ * @author $!{author}
+ * @since $!{date}
+ * @copyright Copyright© 杭州聚能视界科技有限公司
+ */
+public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
+
+}
