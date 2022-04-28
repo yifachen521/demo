@@ -1,17 +1,9 @@
 package com.example.controller;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import java.util.List;
-import com.jn.common.Condition;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.*;
-import com.jn.common.R;
-import com.example.demo.entity.Computer;
-import com.example.demo.pojo.dto.ComputerDTO;
-import com.jn.utils.*;
 import com.example.service.IComputerService;
+import com.jn.utils.*;
+import io.swagger.annotations.Api;
+import lombok.AllArgsConstructor;
 
 /**
  *  控制器

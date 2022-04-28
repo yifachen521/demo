@@ -1,7 +1,7 @@
 package com.example.mapper;
 
-import com.example.demo.entity.Computer;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.example.demo.entity.Computer;
 
 /**
  *  Mapper 接口
