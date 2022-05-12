@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.example.demo.dto.ComputerDTO;
+import com.example.demo.convert.ComputerDTO;
 import com.example.demo.pojo.entity.Computer;
 
 /**

@@ -1,0 +1,10 @@
+
+di 是ioc得技术实现，ioc是一种理论，di就是在程序运行过程中只需要提供 对象得名称就可以从容器中拿到
+
+spring security本质上就是一个过滤器链
+
+重要的类：
+1.  beanfactory  ioc容器
+2.  applicationContext  继承自 BeanFactory  
+    ApplicationContext的初始化和BeanFactory有一个重大的区别：BeanFactory在初始化容器时，并未实例化Bean，直到第一次访问某个Bean时才实例目标Bean；而ApplicationContext则在初始化应用上下文时就实例化所有单实例的Bean。因此ApplicationContext的初始化时间会比BeanFactory稍长一些，不过稍后的调用则没有”第一次惩罚”的问题。
+3.  BeanFactorypostprocessor   beanfactory的后置处理器，BeanFactoryPostProcessor这个接口是用来定义beanFactory的后置处理器的，该接口的实例会在BeanFactory标准初始化之后调用,这个时机点bean的定义信息已经保存加载到beanFactory中，但是bean实例其实还未创建

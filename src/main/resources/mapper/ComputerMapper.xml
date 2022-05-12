@@ -9,7 +9,7 @@
         <result column="remark" property="remark"/>
     </resultMap>
 
-    <resultMap id="computerDTOResultMap" type="com.example.demo.dto.ComputerDTO">
+    <resultMap id="computerDTOResultMap" type="com.example.demo.convert.ComputerDTO">
         <id column="id" property="id"/>
         <result column="price" property="price"/>
         <result column="desc" property="desc"/>

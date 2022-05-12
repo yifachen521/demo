@@ -136,6 +136,21 @@
             <artifactId>demoone</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
+
+        <!--mapstruct自动映射-->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>1.5.0.Beta1</version>
+        </dependency>
+        <!--mapstruct编译-->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+            <version>1.5.0.Beta1</version>
+        </dependency>
+
     </dependencies>
 
     <build>

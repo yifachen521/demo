@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.pojo.entity.Computer;
+import com.example.demo.pojo.entity.Person;
 import com.example.demo.service.IComputerService;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +24,7 @@ public class ComputerController {
 	private IComputerService computerService;
 
 	@PostMapping("list")
-	public void  list(@Validated @RequestBody Computer computer){
+	public void  list(@Validated @RequestBody Person computer){
 		System.out.println("complete");
 	}
 

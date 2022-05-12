@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.utils;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -17,8 +17,8 @@ import java.io.IOException;
 import java.util.*;
 
 /**
- * @Description:
- * @author: 吴昊
+ * @Description:   逆向工程文件
+ * @author: anonymous
  * @date: 2021/3/8
  */
 public class CodeGenerator {

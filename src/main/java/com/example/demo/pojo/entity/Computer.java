@@ -36,7 +36,7 @@ public class Computer implements Serializable {
      * 描述
      */
     @TableField(value = "`desc`")
-  private String desc;
+  private String description;
     /**
      * 备注
      */
@@ -47,6 +47,9 @@ public class Computer implements Serializable {
      */
   @NotBlank(message = "num 不为空")
   private String num;
+
+//  @Valid
+//  private List<ComputerDTO> computerDTO;
 
 
 }

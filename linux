@@ -1,0 +1,11 @@
+1.查看防火墙   开启 关闭  状态
+systemctl status firewalld
+2.开启防火墙端口：  firewall-cmd --zone=public --add-port=80/tcp --permanent      重启防火墙生效
+命令含义：  --zone #作用域    --add-port=80/tcp #添加端口，格式为：端口/通讯协议    --permanent #永久生效，没有此参数重启后失效
+3.查看所有开启的端口  firewall-cmd --list-ports
+4.列出支持的服务，在列表中的服务是放行的  firewall-cmd --get-services
+
+nginx
+在nginx的安装目录下的sbin目录下使用  ./nginx  启动nginx    ./nginx -s reload  重载配置文件的启动
+
+查看进程  ps -ef/aux 
